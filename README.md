@@ -13,6 +13,7 @@ This app allows users to book appointments for various beauty and fashion servic
 - **Fashion Section**: Include fashion items or consultation services for users to browse and purchase or book consultations.
 - **Virtual Try-Ons**: Integrate augmented reality (AR) for makeup try-ons or fashion styling.
 - **Loyalty Program**: Reward users with discounts or points for frequent bookings.
+- **Price-Based Classification**: Classify services into three categories based on their price range: Budget-Friendly Finds, Mid-Range Classics, and Luxury Picks.
 
 ## Technology Stack
 

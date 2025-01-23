@@ -26,3 +26,6 @@ Integrate augmented reality (AR) for virtual makeup try-ons and fashion styling.
 
 ## Loyalty Program
 Implement a loyalty program to reward users with discounts or points for frequent bookings.
+
+## Price-Based Classification
+Classify services into three categories based on their price range: Budget-Friendly Finds, Mid-Range Classics, and Luxury Picks.
