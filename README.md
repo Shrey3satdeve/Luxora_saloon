@@ -67,3 +67,10 @@ This app allows users to book appointments for various beauty and fashion servic
    ```
    npx react-native run-android
    ```
+
+## Running Tests
+
+1. To run the tests, use the following command:
+   ```
+   npm test
+   ```
