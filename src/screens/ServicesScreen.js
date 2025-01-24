@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const services = [
   { id: '1', name: 'Haircut', description: 'Professional haircut service', price: 30 },
@@ -29,6 +30,7 @@ const categorizeServices = (services) => {
 };
 
 const ServicesScreen = () => {
+  const navigation = useNavigation();
   const categorizedServices = categorizeServices(services);
 
   return (
@@ -45,6 +47,10 @@ const ServicesScreen = () => {
                 <Text style={styles.serviceName}>{item.name}</Text>
                 <Text style={styles.serviceDescription}>{item.description}</Text>
                 <Text style={styles.servicePrice}>${item.price}</Text>
+                <Button
+                  title="Book Now"
+                  onPress={() => navigation.navigate('Booking', { serviceId: item.id })}
+                />
               </View>
             )}
           />
