@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const ProfileScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Profile</Text>
@@ -9,6 +12,7 @@ const ProfileScreen = () => {
       <Text style={styles.info}>Email: john.doe@example.com</Text>
       <Text style={styles.info}>Phone: (123) 456-7890</Text>
       <Button title="Edit Profile" onPress={() => {}} />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
     </View>
   );
 };

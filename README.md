@@ -41,3 +41,36 @@ This app allows users to book appointments for various beauty and fashion servic
    ```
    npm start
    ```
+
+## iOS Setup and Run
+
+1. Install CocoaPods dependencies:
+   ```
+   cd ios
+   pod install
+   cd ..
+   ```
+2. Run the app on an iOS simulator:
+   ```
+   npx react-native run-ios
+   ```
+
+## Android Setup and Run
+
+1. Install Android dependencies:
+   ```
+   cd android
+   ./gradlew installDebug
+   cd ..
+   ```
+2. Run the app on an Android emulator:
+   ```
+   npx react-native run-android
+   ```
+
+## Running Tests
+
+1. To run the tests, use the following command:
+   ```
+   npm test
+   ```

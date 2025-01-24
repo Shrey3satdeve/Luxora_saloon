@@ -1,22 +1,13 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome to the Beauty and Fashion App!</Text>
-      <Button
-        title="View Services"
-        onPress={() => navigation.navigate('Services')}
-      />
-      <Button
-        title="Book an Appointment"
-        onPress={() => navigation.navigate('Booking')}
-      />
-      <Button
-        title="View Profile"
-        onPress={() => navigation.navigate('Profile')}
-      />
+      <Text style={styles.description}>
+        Discover a variety of beauty and fashion services, book appointments, and explore profiles of top professionals in the industry.
+      </Text>
     </View>
   );
 };
@@ -31,6 +22,11 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 24,
     marginBottom: 20,
+  },
+  description: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginHorizontal: 20,
   },
 });
 
