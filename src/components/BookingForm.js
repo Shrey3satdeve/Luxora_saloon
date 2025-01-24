@@ -9,11 +9,11 @@ const BookingForm = () => {
   const [time, setTime] = useState('');
   const [service, setService] = useState('');
   const [stylist, setStylist] = useState('');
-  const [timeSlot, setTimeSlot] = useState('');
+  const [availableTimeSlot, setAvailableTimeSlot] = useState('');
 
   const handleBooking = () => {
     // Handle booking logic here
-    console.log('Booking details:', { name, email, phone, date, time, service, stylist, timeSlot });
+    console.log('Booking details:', { name, email, phone, date, time, service, stylist, availableTimeSlot });
   };
 
   return (
@@ -51,7 +51,7 @@ const BookingForm = () => {
       />
       <Picker
         selectedValue={service}
-        style={styles.input}
+        style={styles.picker}
         onValueChange={(itemValue) => setService(itemValue)}
       >
         <Picker.Item label="Select Service" value="" />
@@ -62,24 +62,24 @@ const BookingForm = () => {
       </Picker>
       <Picker
         selectedValue={stylist}
-        style={styles.input}
+        style={styles.picker}
         onValueChange={(itemValue) => setStylist(itemValue)}
       >
         <Picker.Item label="Select Stylist" value="" />
-        <Picker.Item label="Stylist 1" value="stylist1" />
-        <Picker.Item label="Stylist 2" value="stylist2" />
-        <Picker.Item label="Stylist 3" value="stylist3" />
+        <Picker.Item label="Stylist A" value="stylist_a" />
+        <Picker.Item label="Stylist B" value="stylist_b" />
+        <Picker.Item label="Stylist C" value="stylist_c" />
       </Picker>
       <Picker
-        selectedValue={timeSlot}
-        style={styles.input}
-        onValueChange={(itemValue) => setTimeSlot(itemValue)}
+        selectedValue={availableTimeSlot}
+        style={styles.picker}
+        onValueChange={(itemValue) => setAvailableTimeSlot(itemValue)}
       >
         <Picker.Item label="Select Time Slot" value="" />
-        <Picker.Item label="10:00 AM" value="10am" />
-        <Picker.Item label="11:00 AM" value="11am" />
-        <Picker.Item label="12:00 PM" value="12pm" />
-        <Picker.Item label="01:00 PM" value="1pm" />
+        <Picker.Item label="10:00 AM" value="10:00_am" />
+        <Picker.Item label="11:00 AM" value="11:00_am" />
+        <Picker.Item label="12:00 PM" value="12:00_pm" />
+        <Picker.Item label="01:00 PM" value="01:00_pm" />
       </Picker>
       <Button title="Book Now" onPress={handleBooking} />
     </View>
@@ -103,6 +103,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 20,
     paddingHorizontal: 10,
+  },
+  picker: {
+    height: 50,
+    marginBottom: 20,
   },
 });
 
